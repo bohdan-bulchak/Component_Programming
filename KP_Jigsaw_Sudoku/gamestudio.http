@@ -1,0 +1,87 @@
+
+
+
+/////////////////ScoreService//////////////
+
+
+##
+
+//addScore
+
+POST http://localhost:8080/api/score
+Content-Type: application/json
+
+{"game": "jigsaw",
+ "player": "restplayer",
+ "points": 100,
+ "played_at":"2021-04-15T12:00:00"
+}
+
+###
+
+//getTopScores
+
+GET http://localhost:8080/api/score/jigsaw
+
+###
+
+
+
+
+////////////////RatingService/////////////
+
+
+###
+
+//setRating
+
+POST http://localhost:8080/api/rating
+Content-Type: application/json
+
+{"game": "jigsaw",
+  "player": "restplayer",
+  "rating": 3,
+  "rated_on":"2021-04-15T12:00:00"
+}
+
+###
+
+//getAverageRating
+
+GET http://localhost:8080/api/rating/average/jigsaw
+
+###
+
+//getRating
+
+GET http://localhost:8080/api/rating/jigsaw/player
+
+###
+
+
+
+
+////////////////CommentService/////////////
+
+
+
+###
+
+
+//addComment
+
+POST http://localhost:8080/api/comment
+
+{"game": "jigsaw",
+ "player": "restplayer2",
+ "comment": "3333",
+ "commented_at":"2021-04-14T21:46:40.318+00:00"
+}
+
+###
+
+//getComments
+
+GET http://localhost:8080/api/comment/jigsaw
+
+###
